@@ -5,7 +5,21 @@ Kafka for Producing and Consuming messages.
 
 ## Running
 
-Get Kafka going
+To get the application going:
 ```
-$ sudo kafka-server-start config/server.properties
+$ mvn clean install # Build the project
+$ sudo kafka-server-start config/server.properties # Start Kafka
+$ java -jar target/ApacheCamelKafka-v0.0.1.war # Start the war
+```
+
+## Messaging with Kafka
+
+Run the API and hit /messages with a GET
+
+Run the API and hit /messages with a POST body of JSON:
+```
+{
+  "title": "Simple Notification",
+  "body": "The simple notification body!"
+}
 ```
