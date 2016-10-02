@@ -36,4 +36,9 @@ public class Notification {
 		this.body = body;
 	}
 
+	@Override
+	public String toString() {
+		return "Notification [title=" + title + ", body=" + body + "]";
+	}
+
 }
